@@ -65,6 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/email_address_hint"
+                android:importantForAutofill="no"
                 android:inputType="textEmailAddress" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,6 +86,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password_hint"
+                android:importantForAutofill="no"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -114,14 +116,12 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="24dp"
-            android:text="@string/create_account"
+            android:text="@string/sign_up"
             android:textAllCaps="false"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="@drawable/menu_button"
-            app:backgroundTint="#000000"
-            app:cornerRadius="12dp"
-            android:background="@drawable/menu_button"/>
+            android:background="@drawable/menu_button"
+            app:cornerRadius="12dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -136,13 +136,6 @@
                 android:layout_weight="1"
                 android:background="#E0E0E0" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="16dp"
-                android:text="@string/or_divider"
-                android:textColor="#666" />
-
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
@@ -150,19 +143,22 @@
                 android:background="#E0E0E0" />
         </LinearLayout>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/sign_up_google"
-            android:textAllCaps="false"
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_have_account"
+            android:textColor="#666" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/log_in"
             android:textColor="#000"
-            app:backgroundTint="@drawable/menu_button"
-            app:strokeColor="#E0E0E0"
-            app:strokeWidth="1dp"
-            app:cornerRadius="12dp"
-            app:icon="@drawable/ic_google"
-            app:iconTint="@null" />
+            android:textStyle="bold" />
 
         <View
             android:layout_width="match_parent"
@@ -175,21 +171,6 @@
             android:layout_marginBottom="24dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/already_have_account"
-                android:textColor="#666" />
-
-            <TextView
-                android:id="@+id/tv_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/log_in"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:focusable="true" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

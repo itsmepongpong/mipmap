@@ -25,11 +25,8 @@
         <activity android:name=".MainActivity"
             android:exported="false"/>
 
-<<<<<<< HEAD
-        <activity android:name=".Slider"
-=======
-        <activity android:name="SlayderPanel"
->>>>>>> ecc111b (puki ni jeff)
+
+        <class android:name="Slider"
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>

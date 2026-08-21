@@ -128,6 +128,6 @@
 
     <!-- The slider is a self-contained layer, dropped in without map.xml
          needing to know how it works. -->
-    <include layout="@layout/slayder" />
+    <include layout="@layout/slider" />
 
 </FrameLayout>

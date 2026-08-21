@@ -17,7 +17,7 @@ class ITBuilding : AppCompatActivity() {
     private val animDuration = 300L
 
     private lateinit var mapContent: RelativeLayout
-    private lateinit var slayderPanel: Slider
+    private lateinit var Slider: Slider
 
     // Every building button paired with the label shown on its panel.
     private val buildings = listOf(
@@ -36,13 +36,13 @@ class ITBuilding : AppCompatActivity() {
 
         mapContent = findViewById(R.id.mapContent)
 
-        slayderPanel = Slider(rootView = findViewById(android.R.id.content))
-        slayderPanel.onClose = { resetZoom() }
+        Slider = Slider(rootView = findViewById(android.R.id.content))
+        Slider.onClose = { resetZoom() }
 
         for ((id, label) in buildings) {
             findViewById<Button>(id).setOnClickListener { button ->
                 zoomToBuilding(button)
-                slayderPanel.open(label)
+                Slider.open(label)
             }
         }
     }
@@ -67,10 +67,11 @@ class ITBuilding : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (slayderPanel.isOpen) {
-            slayderPanel.close()
+        if (Slider.isOpen) {
+            Slider.close()
         } else {
             super.onBackPressed()
         }
     }
+
 }
