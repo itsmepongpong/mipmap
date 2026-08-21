@@ -26,7 +26,8 @@
             android:exported="false"/>
 
 
-        <class android:name="Slider"
+        <class android:name="SlayderPanel"
+
             android:exported="false"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>

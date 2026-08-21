@@ -11,7 +11,12 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
+
+
 class LoginActivity : AppCompatActivity() {
+
+    private lateinit var ITBuilding: ITBuilding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -22,6 +27,8 @@ class LoginActivity : AppCompatActivity() {
         val etPassword = findViewById<TextInputEditText>(R.id.et_password)
         val btnLogin = findViewById<MaterialButton>(R.id.btn_login)
         val tvSignup = findViewById<TextView>(R.id.tv_signup)
+
+
 
         tvSignup.setOnClickListener {
             val intent = Intent(this, SignUpActivity::class.java)
@@ -54,6 +61,12 @@ class LoginActivity : AppCompatActivity() {
             if (isValid) {
                 Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
                 // TODO: Navigate to Home
+
+                btnLogin.setOnClickListener {
+                    val intent = Intent(this, ITBuilding::class.java)
+                    startActivity(intent)
+                }
+
             }
         }
     }

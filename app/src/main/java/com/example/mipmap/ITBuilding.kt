@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 /**
  * Map screen. Only knows about the map and its buildings - the slider is
- * a separate, self-contained component (see SlayderPanel) that this class
+ * a separate, self-contained component (see Slider) that this class
  * just talks to through open()/close()/onOpen/onClose.
  */
 class ITBuilding : AppCompatActivity() {
