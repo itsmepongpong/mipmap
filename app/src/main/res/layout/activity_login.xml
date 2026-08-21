@@ -90,6 +90,7 @@
             android:textStyle="bold"
             android:textColor="@android:color/white"
             app:backgroundTint="#000000"
+            android:background="@drawable/menu_button"
             app:cornerRadius="12dp" />
 
         <LinearLayout
@@ -119,6 +120,7 @@
                 android:background="#E0E0E0" />
         </LinearLayout>
 
+<<<<<<< HEAD
         <Button
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -146,11 +148,25 @@
             app:cornerRadius="12dp"
             app:icon="@drawable/ic_apple"
             app:iconTint="@null" />
+=======
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dont_have_account"
+            android:textColor="#666" />
+
+        <TextView
+            android:id="@+id/tv_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="@string/sign_up"
+            android:textColor="#000"
+            android:textStyle="bold" />
+>>>>>>> ecc111b (puki ni jeff)
+
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -158,21 +174,7 @@
             android:layout_marginBottom="24dp"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/dont_have_account"
-                android:textColor="#666" />
-
-            <TextView
-                android:id="@+id/tv_signup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/sign_up"
-                android:textColor="#000"
-                android:textStyle="bold"
-                android:clickable="true"
-                android:focusable="true" />
         </LinearLayout>
+
     </LinearLayout>
 </ScrollView>
