@@ -89,7 +89,6 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"
-            app:backgroundTint="#000000"
             android:background="@drawable/menu_button"
             app:cornerRadius="12dp" />
 
@@ -120,36 +119,6 @@
                 android:background="#E0E0E0" />
         </LinearLayout>
 
-<<<<<<< HEAD
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="24dp"
-            android:text="@string/continue_with_google"
-            android:textAllCaps="false"
-            android:textColor="#000"
-            app:backgroundTint="@android:color/white"
-            app:strokeColor="#E0E0E0"
-            app:strokeWidth="1dp"
-            app:cornerRadius="12dp"
-            app:icon="@drawable/ic_google"
-            app:iconTint="@null" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/continue_with_apple"
-            android:textAllCaps="false"
-            android:textColor="#000"
-            app:backgroundTint="@android:color/white"
-            app:strokeColor="#E0E0E0"
-            app:strokeWidth="1dp"
-            app:cornerRadius="12dp"
-            app:icon="@drawable/ic_apple"
-            app:iconTint="@null" />
-=======
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -165,8 +134,6 @@
             android:text="@string/sign_up"
             android:textColor="#000"
             android:textStyle="bold" />
->>>>>>> ecc111b (puki ni jeff)
-
 
         <LinearLayout
             android:layout_width="wrap_content"
