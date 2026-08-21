@@ -1,10 +1,12 @@
-package com.example.mipmap.ui.theme
+package com.example.mipmap
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Patterns
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
-import com.example.login.SignUp.SignUpActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -19,10 +21,10 @@ class MainActivity : AppCompatActivity() {
         val tilPassword = findViewById<TextInputLayout>(R.id.til_password)
         val etPassword = findViewById<TextInputEditText>(R.id.et_password)
         val btnLogin = findViewById<MaterialButton>(R.id.btn_login)
-        val tvSignup = findViewById<android.widget.TextView>(R.id.tv_signup)
+        val tvSignup = findViewById<TextView>(R.id.tv_signup)
 
         tvSignup.setOnClickListener {
-            val intent = android.content.Intent(this, SignUpActivity::class.java)
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
 
@@ -36,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             if (etEmail.text.isNullOrBlank()) {
                 tilEmail.error = "Email is required"
                 isValid = false
-            } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(etEmail.text.toString()).matches()) {
+            } else if (!Patterns.EMAIL_ADDRESS.matcher(etEmail.text.toString()).matches()) {
                 tilEmail.error = "Enter a valid email"
                 isValid = false
             }
